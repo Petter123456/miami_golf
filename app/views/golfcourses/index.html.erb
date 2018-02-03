@@ -1,30 +1,12 @@
-<!-- WeatherApi -->
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Description</th>
-    <th>Farenheit</th>
-    <th>Humidity</th>
-    <th>Wind Speed</th>
-  </tr>
-  <% @request_weather_forecast.each do |forecast| %>
-    <tr>
-    <td><%= Time.at(forecast["dt"]) %></td>
-    <td><%= forecast["weather"][0]["description"] %></td>
-    <td><%= forecast["main"]["temp"] %></td>
-    <td><%= forecast["main"]["humidity"] %></td>
-    <td><%= forecast["wind"]["speed"] %></td>
-    </tr>
-  <% end %>
-  </table>
+<div id="openweathermap-widget-17"></div>
 
 <div class="center jumbotron">
   <h1>MiamiGolf</h1>
-  <%= link_to "Golf now","#", class: "btn btn-success btn-lg btn-xlarge" %>
+  <!-- <%= link_to "Golf now","#", class: "btn btn-success btn-lg btn-xlarge" %> -->
   <div class="container responsive">
           <div class="row">
           <div class='col-sm-12'>
-              <input type='text' class="form-control" id='datetimepicker4' />
+              <!-- <input type='text' class="form-control" id='datetimepicker4' /> -->
           </div>
           <script type="text/javascript">
               $(function () {
@@ -43,6 +25,33 @@
       </script>
   </div>
 </div>
+
+  <!-- WeatherApi -->
+<div>
+  <table class="table table-hover ">
+    <tbody>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Farenheit</th>
+      <th>Humidity</th>
+      <th>Wind Speed</th>
+    </tr>
+    <% @request_weather_forecast.each do |forecast| %>
+      <tr>
+      <td><%= Time.at(forecast["dt"]) %></td>
+      <td><%= forecast["weather"][0]["description"] %></td>
+      <td><%= forecast["main"]["temp"] %></td>
+      <td><%= forecast["main"]["humidity"] %></td>
+      <td><%= forecast["wind"]["speed"] %></td>
+      </tr>
+    <% end %>
+    </table>
+    </tbody>
+</div>
+
+
+<!--TeeTime!  -->
 <table class="table table-hover ">
   <tbody>
     <tr>
@@ -83,7 +92,6 @@
     </tr>
   </tbody>
 </table>
-
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -146,4 +154,6 @@
     $('#hidden_golfcourse_id').val(courseId);
 
 });
+
+
 </script>

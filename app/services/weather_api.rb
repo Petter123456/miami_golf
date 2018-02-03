@@ -2,7 +2,7 @@ class WeatherApi
 
   def self.forecast()
 
-    url = "http://api.openweathermap.org/data/2.5/forecast?q=Miami,us&mode=xml,id=524901&APPID=22cc656f6993eccb9585894f35de1451"
+    url = "http://api.openweathermap.org/data/2.5/forecast?q=Miami,us&mode=xml,id=524901&APPID=84ef38e157ea911e8bd1dcca184bbff0"
 
     response = HTTParty.get url
     body = response.body

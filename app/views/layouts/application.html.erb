@@ -4,11 +4,16 @@
     <title>MiamiGolf</title>
     <%= csrf_meta_tags %>
 
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://js.stripe.com/v3/"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>MiamiGolf Map</title>
     <style>
       #map{
@@ -58,204 +63,200 @@
         // CourseName Miami Beach Golf Club
         addMarker({
           coords:{lat:25.7997119, lng:-80.1381364},
-          content:'<h3><Miami Beach Golf Club</h3>'
+          content:'<h4>Miami Beach Golf Club</h4><h5>Address: 2301 Alton Rd, Miami Beach, FL 33140</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 532-3350</h6>'
+
         });
         // CourseName Miami Shores Country Club
         addMarker({
           coords:{lat:25.8690395355225, lng:-80.1758575439453},
-          content:'<h3>Miami Shores Country Club</h3>'
+          content:'<h4>Miami Shores Country Club</h4><h5>Address: 10000 Biscayne Blvd, Miami Shores, FL 33138</h5><h6>Hours: Open ⋅ Closes 9PM Phone: (305) 795-2360</h6>'
         });
         // CourseName Normandy Shores Golf Club
         addMarker({
           coords:{lat:25.8563316, lng:-80.1444123},
-          content:'<h3>Normandy Shores Golf Club</h3>'
+          content:'<h4>Normandy Shores Golf Club</h4><h5>Address: 2401 Biarritz Dr, Miami Beach, FL 33141</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 868-6502</h6>'
         });
         // CourseName Crandon Golf at Key Biscayne
         addMarker({
           coords:{lat:25.7116317749023, lng:-80.1559371948242},
-          content:'<h3>Crandon Golf at Key Biscayne</h3>'
+          content:'<h4>Crandon Golf at Key Biscayne</h4><h5>Address: 6700 Crandon Blvd, Key Biscayne, FL 33149</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 361-9129</h6>'
         });
         // CourseName Trump National Doral Golf Club - Blue Monster/Red Tiger
         addMarker({
           coords:{lat:25.8141384124756, lng:-80.3383636474609},
-          content:'<h3>Trump National Doral Golf Club - Blue Monster/Red Tiger</h3>'
-        });
-        // CourseName Trump National Doral Golf Club - Golden Palm
-        addMarker({
-          coords:{lat:25.8188343048096, lng:-80.3438339233398},
-          content:'<h3>Trump National Doral Golf Club - Golden Palm</h3>'
+          content:'<h4>Trump National Doral Golf Club - Blue Monster/Red Tiger/Golden Palm</h4><h5>Address: 4400 NW 87th Ave, Doral, FL 33178</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 592-2000</h6>'
         });
         // CourseName Costa Del Sol Golf Club
         addMarker({
           coords:{lat:25.8071892, lng:-80.3593091},
-          content:'<h3>Costa Del Sol Golf Club</h3>'
+          content:'<h4>Costa Del Sol Golf Club</h4><h5>Address: 100 Costa Del Sol Blvd, Doral, FL 33178</h5><h6>Hours: Open ⋅ Closes 5:45PM Phone: (305) 592-3300</h6>'
         });
         // CourseName The Senator Course at Don Shula's Golf Club
         addMarker({
           coords:{lat:25.91492, lng:-80.32217},
-          content:'<h3>The Senator Course at Don Shulas Golf Club</h3>'
+          content:'<h4>The Senator Course at Don Shulas Golf Club</h4><h5>Address: 7601 Miami Lakes Dr, Hialeah, FL 33014</h5><h6>Hours: Open ⋅ Closes 6PM Phone:(305) 820-8088</h6>'
         });
         // CourseName Greynolds Golf Course
         addMarker({
           coords:{lat:25.9380550384521, lng:-80.150749206543},
-          content:'<h3>Greynolds Golf Course</h3>'
+          content:'<h4>Greynolds Golf Course</h4><h5>Address: 17530 West Dixie Highway, North Miami Beach, FL 33160</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 949-1741</h6>'
         });
         // CourseName Country Club of Miami - East/West
         addMarker({
           coords:{lat:25.942086, lng:-80.313482},
-          content:'<h3>Country Club of Miami - East/West</h3>'
+          content:'<h4>Country Club of Miami - East/West</h4><h5>Address: 6801 NW 186th St, Hialeah, FL 33015</h5><h6>Hours: Open ⋅ Closes 8:30PM Phone: (305) 829-8456</h6>'
         });
         // CourseName Briar Bay Golf Course
         addMarker({
           coords:{lat:25.6452579498291, lng:-80.346305847168},
-          content:'<h3>Briar Bay Golf Course</h3>'
+          content:'<h4>Briar Bay Golf Course</h4><h5>Address: 9373 SW 95th Ave, Miami, FL 33176</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (305) 235-6754</h6>'
         });
         // CourseName Palmetto Golf Course
         addMarker({
           coords:{lat:25.628776550293, lng:-80.3447265625},
-          content:'<h3>Palmetto Golf Course</h3>'
+          content:'<h4>Palmetto Golf Course</h4><h5>Address: 9300 SW 152nd St, Miami, FL 33157</h5><h6>Hours: Open ⋅ Closes 8PM Phone: (305) 238-2922</h6>'
         });
         // CourseName Miccosukee Golf and Country Club
         addMarker({
           coords:{lat:25.70674, lng:-80.427912},
-          content:'<h3>Miccosukee Golf and Country Club</h3>'
+          content:'<h4>Miccosukee Golf and Country Club</h4><h5>Address: 6401 Kendale Lakes Dr, Miami, FL 33183</h5><h6>Hours: Open ⋅ Closes 8:30PM Phone: (305) 382-3930</h6>'
         });
         // CourseName Orangebrook Golf & Country Club - East/West
         addMarker({
           coords:{lat:26.006221, lng:-80.173772},
-          content:'<h3>Orangebrook Golf & Country Club - East/West</h3>'
+          content:'<h4>Orangebrook Golf & Country Club - East/West</h4><h5>Address: 400 Entrada Dr, Hollywood, FL 33021</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (954) 967-4653</h6>'
         });
         // "CourseName Pembroke Lakes Golf Club
         addMarker({
           coords:{lat:26.0187034, lng:-80.2867467},
-          content:'<h3>Pembroke Lakes Golf Club</h3>'
+          content:'<h4>Pembroke Lakes Golf Club</h4><h5>Address: 10500 Taft St, Pembroke Pines, FL 33026</h5><h6>Hours: Open ⋅ Closes 5PM Phone: (954) 431-4144</h6>'
         });
         // "CourseName Grand Palms Hotel & Golf Resort - Grand/Royal/Sabal"
         addMarker({
           coords:{lat:26.00351715087894, lng:-80.3539886474609},
-          content:'<h3>Grand Palms Hotel & Golf Resort - Grand/Royal/Sabal"</h3>'
+          content:'<h4>Grand Palms Hotel & Golf Resort - Grand/Royal/Sabal"</h4><h5>Address: 110 Grand Palms Dr, Pembroke Pines, FL 33027</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (954) 431-8800</h6>'
         });
         // CourseName The Club at Emerald Hills
         addMarker({
           coords:{lat:26.041878, lng:-80.186002},
-          content:'<h3>The Club at Emerald Hills</h3>'
+          content:'<h4>The Club at Emerald Hills</h4><h5>Address: 4100 N Hills Dr, Hollywood, FL 33021</h5><h6>Hours: Open ⋅ Closes 5PM Phone: (954) 961-4000</h6>'
         });
         // "CourseName Davie Golf Club"
         addMarker({
           coords:{lat:26.0905151367188, lng:-80.257926940918},
-          content:'<h3>Davie Golf Club</h3>'
+          content:'<h4>Davie Golf Club</h4><h5>Address: 8201 Nova Dr, Davie, FL 33324</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (954) 797-4653</h6>'
         });
         // "CourseName Bonaventure Golf Club"
         addMarker({
           coords:{lat:26.1210426, lng:-80.3707282},
-          content:'<h3>Bonaventure Golf Club</h3>'
+          content:'<h4>Bonaventure Golf Club</h4><h5>Address: 200 Bonaventure Blvd, Weston, FL 33326</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (954) 389-2100</h6>'
         });
         // "CourseName The Bridges at Springtree Golf Club"
         addMarker({
           coords:{lat:26.1707188, lng:-80.258137},
-          content:'<h3>The Bridges at Springtree Golf Club</h3>'
+          content:'<h4>The Bridges at Springtree Golf Club</h4><h5>Address: 8150 Springtree Dr, Sunrise, FL 33351 </h5><h6>Hours: Open ⋅ Closes 8PM Phone: (954) 572-2270</h6>'
         });
         // "CourseName Colony West Country Club - Championship/Glades"
         addMarker({
           coords:{lat:26.2060006, lng:-80.2671375},
-          content:'<h3>Colony West Country Club - Championship/Glades</h3>'
+          content:'<h4>Colony West Country Club - Championship/Glades</h4><h5>Address: 6800 NW 88th Ave, Tamarac, FL 33321</h5><h6>Hours: Open ⋅ Closes 8PM Phone: (954) 726-8430</h6>'
         });
         // "CourseName Woodmont Country Club - Cypress/Cypress 2/Pines"
         addMarker({
           coords:{lat:26.2177672, lng:-80.2602096},
-          content:'<h3>Woodmont Country Club - Cypress/Cypress 2/Pines</h3>'
+          content:'<h4>Woodmont Country Club - Cypress/Cypress 2/Pines</h4><h5>Address: 7801 NW 80th Ave, Tamarac, FL 33321</h5><h6>Hours: Open ⋅ Closes 8PM Phone: (954) 548-6989</h6>'
         });
         // "CourseName Palm Aire Country Club & Resort - Oaks Course/Palms Course/Cypress Course"
         addMarker({
           coords:{lat:26.2249547, lng:-80.1575119},
-          content:'<h3>Palm Aire Country Club & Resort - Oaks Course/Palms Course/Cypress Course</h3>'
+          content:'<h4>Palm Aire Country Club & Resort - Oaks Course/Palms Course/Cypress Course</h4><h5>Address: 3701 Oaks Clubhouse Dr, Pompano Beach, FL 33069</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (954) 978-1737</h6>'
         });
         // "CourseName Carolina Golf Club"
         addMarker({
           coords:{lat:26.263708114624, lng:-80.2231750488281},
-          content:'<h3>Carolina Golf Club</h3>'
+          content:'<h4>Carolina Golf Club</h4><h5>Address: 3011 N Rock Island Rd, Margate, FL 33063</h5><h6>Hours: Open ⋅ Closes 8PM Phone: (954) 753-3500</h6>'
         });
         // "CourseName Heron Bay Golf Club"
         addMarker({
           coords:{lat:26.321114, lng:-80.291848},
-          content:'<h3>Heron Bay Golf Club</h3>'
+          content:'<h4>Heron Bay Golf Club</h4><h5>Address: 11755 Heron Bay Blvd, Coral Springs, FL 33321</h5><h6>Hours: Open ⋅ Closes 6:30PM Phone: (954) 796-2000</h6>'
         });
         // "CourseName Boca Dunes Golf and Country Club - Championship"
         addMarker({
           coords:{lat:26.337224, lng:-80.19516},
-          content:'<h3>Boca Dunes Golf and Country Club - Championship</h3>'
+          content:'<h4>Boca Dunes Golf and Country Club - Championship</h4><h5>Address: 1400 SW 65th Ave, Boca Raton, FL 33428</h5><h6>Hours: Open ⋅ Closes 5:30PMPhone: (561) 451-1600</h6>'
         });
         // "CourseName Southwinds Golf Course"
         addMarker({
           coords:{lat:26.3879318237305, lng:-80.1877365112305},
-          content:'<h3>Southwinds Golf Course</h3>'
+          content:'<h4>Southwinds Golf Course</h4><h5>Address: 19557 Lyons Rd, Boca Raton, FL 33498</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (561) 483-1305</h6>'
         });
         // "CourseName Lakeview Golf Club"
         addMarker({
           coords:{lat:26.4405161, lng:-80.1060064},
-          content:'<h3>Lakeview Golf Club</h3>'
+          content:'<h4>Lakeview Golf Club</h4><h5>Address: 1200 Dover Rd, Delray Beach, FL 33445</h5><h6>Hours: Open ⋅ Closes 8PM Phone: (561) 498-3229</h6>'
         });
         // "CourseName Delray Beach Golf Club"
         addMarker({
           coords:{lat:26.4537489, lng:-80.09832},
-          content:'<h3>Delray Beach Golf Club</h3>'
+          content:'<h4>Delray Beach Golf Club</h4><h5>Address: 2200 Highland Ave, Delray Beach, FL 33445</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (561) 243-7385</h6>'
         });
         // "CourseName Cypress Creek Country Club"
         addMarker({
           coords:{lat:26.53699, lng:-80.12163},
-          content:'<h3>Cypress Creek Country Club</h3>'
+          content:'<h4>Cypress Creek Country Club</h4><h5>Address: 9400 S Military Trail, Boynton Beach, FL 33436 </h5><h6>Hours: Open ⋅ Closes 6PM Phone: (561) 732-4202</h6>'
         });
         // "CourseName Winston Trails Golf Club"
         addMarker({
           coords:{lat:26.5799563, lng:-80.1408332},
-          content:'<h3>Winston Trails Golf Club/h3>'
+          content:'<h4>Winston Trails Golf Club/h4><h5>Address: 6101 Winston Trails Blvd, Lake Worth, FL 33463</h5><h6>Hours: Open ⋅ Closes 5:30PM ⋅ Reopens 6PM Phone: (561) 439-3700</h6>'
         });
         // "CourseName Park Ridge Golf Course"
         addMarker({
           coords:{lat:26.5930224, lng:-80.193971},
-          content:'<h3>Park Ridge Golf Course</h3>'
+          content:'<h4>Park Ridge Golf Course</h4><h5>Address: 9191 Lantana Rd, Lake Worth, FL 33467</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (561) 966-7044</h6>'
         });
         // "CourseName Forest Oaks Golf Club"
         addMarker({
           coords:{lat:26.61039954, lng:-80.1622404},
-          content:'<h3>Forest Oaks Golf Club</h3>'
+          content:'<h4>Forest Oaks Golf Club</h4><h5>Address: 144 Lucerne Lakes Blvd N, Lake Worth, FL 33467</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (561) 967-6810</h6>'
         });
         // "CourseName Palm Beach National Golf & Country Club"
         addMarker({
           coords:{lat:26.6253645, lng:-80.1651372},
-          content:'<h3>Palm Beach National Golf & Country Club</h3>'
+          content:'<h4>Palm Beach National Golf & Country Club</h4><h5>Address: 7500 St Andrews Rd, Lake Worth, FL 33467Hours: Open ⋅ Closes 5PM Phone: (561) 965-3381</h5><h6></h6>'
         });
         // "CourseName Poinciana Golf Club"
         addMarker({
           coords:{lat:26.6248016357422, lng:-80.1541900634766},
-          content:'<h3>Poinciana Golf Club</h3>'
+          content:'<h4>Poinciana Golf Club</h4><h5>Address: 3536 Via Poinciana, Lake Worth, FL 33467</h5><h6>Hours: Open ⋅ Closes 5:30PM Phone: (561) 439-4721</h6>'
         });
         // "CourseName Okeeheelee Golf Course - Eagle/Osprey"
         addMarker({
           coords:{lat:26.6511338, lng:-80.1671694},
-          content:'<h3>Okeeheelee Golf Course - Eagle/Osprey</h3>'
+          content:'<h4>Okeeheelee Golf Course - Eagle/Osprey</h4><h5>Address: 7715 Forest Hill Blvd, West Palm Beach, FL 33413</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (561) 964-4653</h6>'
         });
         // "CourseName West Palm Beach Golf Club"
         addMarker({
           coords:{lat:26.6499099, lng:-80.065704},
-          content:'<h3>West Palm Beach Golf Club</h3>'
+          content:'<h4>West Palm Beach Golf Club</h4><h5>Address: 7001 Parker Ave, West Palm Beach, FL 33405</h5><h6>Hours: Open ⋅ Closes 7PM Phone: (561) 822-1591</h6>'
         });
         // "CourseName Madison Green Golf Club"
         addMarker({
           coords:{lat:26.71328, lng:-80.237528},
-          content:'<h3>Madison Green Golf Club</h3>'
+          content:'<h4>Madison Green Golf Club</h4><h5>Address: 2001 Crestwood Blvd N, Royal Palm Beach, FL 33411</h5><h6>Hours: Open ⋅ Closes 5PM Phone: (561) 784-5225</h6>'
         });
         // "CourseName Village Golf Club"
         addMarker({
           coords:{lat:26.71632, lng:-80.226501},
-          content:'<h3>Village Golf Club</h3>'
+          content:'<h4>Village Golf Club</h4><h5>Address: 122 Country Club Dr, Royal Palm Beach, FL 33411</h5><h6>Hours: Open ⋅ Closes 5:30PM Phone: (561) 793-1400</h6>'
         });
         // "CourseName Sandhill Crane Golf Club"
         addMarker({
           coords:{lat:26.8121223449707, lng:-80.2190856933594},
-          content:'<h3>Sandhill Crane Golf Club</h3>'
+          content:'<h4>Sandhill Crane Golf Club</h4><h5>Address: 11401 Northlake Blvd, Palm Beach Gardens, FL 33412</h5><h6>Hours: Open ⋅ Closes 6PM Phone: (561) 630-1160</h6>'
         });
-      // ADD MArker function
+      // ADD Marker function
           function addMarker(props){
             var marker = new google.maps.Marker({
               position:props.coords,
