@@ -13,10 +13,16 @@
  *= require_tree .
  *= require_self
  */
-$navbar-default-bg: #449d44;
+// $navbar-default-bg: #449d44;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.table, th, td {
+   border: 1px solid black;
+   text-align: left;
+   background-color: #449d44;
+}
 
 #logo {
   float: left;
@@ -42,35 +48,46 @@ $navbar-default-bg: #449d44;
   top: 9px;
 
 }
-
-.jumbotron {
+body {
   background: asset-url('3Golf.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 750px;
-
 }
 
-.jumbotron h1 {
+
+
+h1 {
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
   font-weight: bold;
 }
-.jumbotron h4 {
-  color: #449d44;
+
+h3 {
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
   font-weight: bold;
 }
 
-.btn-xlarge {
-  font-size: 1.7em;
-  background-color: transparent;
+
+.left {
+  width:49%;
+  height:123px;
+  float: left;
+  padding-top: 50px;
 }
+.right {
+  width:49%;
+  height:123px;
+  float: right;
+  padding-top: 50px;
+
+}
+
 .footer {
-  margin-top: 45px;
+  margin-top: 1500px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
