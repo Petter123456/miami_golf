@@ -53,11 +53,6 @@ body {
   background-size: cover;
 }
 
-// .jumbotron {
-//   background: asset-url('3Golf.jpg') no-repeat center center fixed;
-//   background-size: cover;
-//   height: 750px;
-
 
 
 h1 {
@@ -67,29 +62,24 @@ h1 {
   letter-spacing: -1px;
   font-weight: bold;
 }
-// .jumbotron h4 {
-//   color: #449d44;
-//   text-align: center;
-//   margin-bottom: 30px;
-//   letter-spacing: -1px;
-//   font-weight: bold;
-// }
 
-// .btn-xlarge {
-//   font-size: 1.7em;
-//   background-color: transparent;
-// }
+h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
 
 .left {
   width:49%;
-  // background-color: #fff;
   height:123px;
   float: left;
   padding-top: 50px;
 }
 .right {
   width:49%;
-  // background-color: #fff;
   height:123px;
   float: right;
   padding-top: 50px;
