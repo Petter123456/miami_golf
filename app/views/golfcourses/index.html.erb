@@ -1,3 +1,23 @@
+<div class="background">
+  <h1 class="page-header">Miami Golf</h1> <br>
+
+  <div id="container">
+    <!-- Code generated at https://WeatherWidget.io -->
+  <a class="weatherwidget-io" href="https://forecast7.com/en/25d76n80d19/miami/" data-label_1="Miami" data-label_2="WEATHER" data-theme="orange" >Miami WEATHER</a>
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
+  </script>
+  </div>
+
+
+<!-- map google  -->
+<div class="container">
+  <div class="row backgorund">
+    <div class="col-md-8 col-md-offset-2">
+
+      <div class="row extra_styling_form">
+        <div id="map" class="col-md-7">
+
 <div id="openweathermap-widget-17"></div>
 
 <div class="body">
@@ -9,22 +29,68 @@
               <!-- <input type='text' class="form-control" id='datetimepicker4' /> -->
           </div>
           <script type="text/javascript">
-              $(function () {
-                  $('#datetimepicker4').datetimepicker();
-              });
+            $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    viewMode: 'years'
+                });
+            });
           </script>
-      </div>
-  </div>
-  <div id="map"></div>
-      <script type="text/javascript">
-          $(function () {
-              $('#datetimepicker4').datetimepicker({
-                  viewMode: 'years'
-              });
-          });
-      </script>
+        </div>
+        <div class="col-md-4 date_picker">
+          <%= form_tag(root_path, method: "get") do %>
+        <p class="form_select_date_fields" id="string_date"><%= label_tag(:q, "Select date") %></p>
+        <p class="form_select_date_fields"><%= date_field_tag(:usersdate) %> </p>
+        <p class="btn btn-primary book form_select_date_fields" id="search"><%= submit_tag("Search")%> </p>
+          <% end %>
+        </div>
+      </div><!-- .row for map and form -->
+
+    </div>
   </div>
 </div>
+
+
+
+
+<div class="table_container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <table class="table table-hover">
+        <thead>
+          <th class="table_header">Location</th>
+          <th class="table_header">Teetimes</th>
+          <th class="table_header">Reserve</th>
+        </thead>
+        <tbody>
+          <% @request_tee_times["data"].each do |course| %>
+            <tr>
+              <td>
+                <%= "#{course['courseName']}"%>
+              </td>
+              <td>
+                <select class="btn btn-primary book">
+                  <% course["teeTimes"].each do |tee| %>
+                    <option class='optionsss'>
+                      <%= " Tee time #{tee['teeTime']}"%>
+                      <%= tee["purchase"]["price"]%> $
+
+                    </option>
+                  <%end%>
+                </select>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary book" data-toggle="modal" data-target="#exampleModal" course-id="<%=course['courseId']%>">Book
+                </button>
+              </td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 
   <!-- WeatherApi -->
 <div id="wrap">
@@ -125,8 +191,6 @@
             <%= text_field_tag(:teetime) %>
             <%= hidden_field_tag(:hidden_golfcourse_id) %>
             <%# submit_tag("Search") %>
-
-
         <div class="form-row">
    <label for="card-element">
      Credit or debit card
@@ -168,3 +232,4 @@
 
 
 </script>
+</div>
