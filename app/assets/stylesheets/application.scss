@@ -16,3 +16,100 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+// $navbar-default-bg: #449d44;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.table, th, td {
+   border: 1px solid black;
+   text-align: left;
+   background-color: #449d44;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+#map {
+  height: 290px !important;
+  top: 9px;
+
+}
+body {
+  background: asset-url('3Golf.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+
+.left {
+  width:49%;
+  height:123px;
+  float: left;
+  padding-top: 50px;
+}
+.right {
+  width:49%;
+  height:123px;
+  float: right;
+  padding-top: 50px;
+
+}
+
+.footer {
+  margin-top: 1500px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer a:hover {
+  color: #222;
+}
+
+.footer small {
+  float: left;
+}
+
+.footer ul {
+  float: right;
+  list-style: none;
+}
+
+.footer ul li {
+  float: left;
+  margin-left: 15px;
+}

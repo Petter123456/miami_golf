@@ -17,6 +17,17 @@
 
       <div class="row extra_styling_form">
         <div id="map" class="col-md-7">
+
+<div id="openweathermap-widget-17"></div>
+
+<div class="body">
+  <h1>TeeTime</h1>
+  <!-- <%= link_to "Golf now","#", class: "btn btn-success btn-lg btn-xlarge" %> -->
+  <div class="container responsive">
+          <div class="row">
+          <div class='col-sm-12'>
+              <!-- <input type='text' class="form-control" id='datetimepicker4' /> -->
+          </div>
           <script type="text/javascript">
             $(function () {
                 $('#datetimepicker4').datetimepicker({
@@ -79,6 +90,86 @@
   </div>
 </div>
 
+
+
+  <!-- WeatherApi -->
+<div id="wrap">
+  <div class="left">
+  <table class="table table-hover ">
+    <thead>
+      <h3>5 Day Forecast</h3>
+    </thead>
+      <tbody>
+
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Farenheit</th>
+        <th>Humidity</th>
+        <th>Wind Speed</th>
+      </tr>
+      <% @request_weather_forecast.each do |forecast| %>
+        <tr>
+        <td><%= Time.at(forecast["dt"]) %></td>
+        <td><%= forecast["weather"][0]["description"] %></td>
+        <td><%= forecast["main"]["temp"] %></td>
+        <td><%= forecast["main"]["humidity"] %></td>
+        <td><%= forecast["wind"]["speed"] %></td>
+        </tr>
+      <% end %>
+      </table>
+      </tbody>
+  </div>
+
+
+  <!--TeeTime!  -->
+  <!-- <div style="float: right"> -->
+  <div class="right">
+  <table class="table table-hover ">
+    <thead>
+      <h3>Courses Available</h3>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          <%= form_tag(root_path, method: "get") do %>
+      <%= label_tag(:q, "Select Teetime Dates:") %>
+      <%= date_field_tag(:usersdate) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+      </th>
+      </tr>
+      <tr>
+        <th>
+          Location
+        </th>
+        <th>
+          Teetime
+        </th>
+        <!-- table headers goes here -->
+      </tr>
+        <% @request_tee_times["data"].each do |course| %>
+        <tr>
+          <th>
+      <%= "CourseName #{course['courseName']}"%>
+      </th>
+      <th>
+        <select><% course["teeTimes"].each do |tee| %>
+        <option class='optionsss'>  <%= tee["purchase"]["price"]%>
+          <%= " teeTime #{tee['teeTime']}"%> </option>
+        <%end%></select>
+
+        <button type="button" class="btn btn-primary book" data-toggle="modal" data-target="#exampleModal" course-id="<%=course['courseId']%>">
+              Book
+            </button>
+          <!-- <%# link_to 'Book', book_path(course_id: course['courseId'])%> -->
+        <%end%>
+      </th>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -138,5 +229,7 @@
     $('#hidden_golfcourse_id').val(courseId);
 
 });
+
+
 </script>
 </div>
